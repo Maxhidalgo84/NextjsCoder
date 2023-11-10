@@ -2,11 +2,13 @@ import { CategoryMenu } from "@/components/products/CategoryMenu"
 import { ProductsContainer } from "@/components/products/ProductsContainer"
 
 
-export const generateMetada = async({ params }) => {
+
+export const generateMetadata = async ({ params }) => {
     return {
-        title: `Bodega Maxteina - ${params.categoria}`
+        title: 'Bodega Maxteina - ' + params.categoria
     }
 }
+
 
 
 

@@ -21,18 +21,19 @@ export const ProductDetail = ({ slug }) => {
    
 
           return (
-          <div className="bg-white m-auto">
+              <div className="bg-white m-auto min-w-max ">
               <div className="pt-6">
 
 
                   {/* Image gallery */}
                   <div className="mx-auto mt-6 max-w-lg sm:px-6 lg:gap-x-8 lg:px-8">
-                      <div className="aspect-h-5 aspect-w-6  rounded-lg lg:block">
+                      <div className="aspect-h-6 aspect-w-6  rounded-lg lg:block">
                           <Image
                              fill
                               src={product.image}
                               alt={product.name}
-                              className="h-full w-full object-cover object-center"
+                              
+                              //className="h-full w-full  object-center"
                           />
                       </div>
                   </div>

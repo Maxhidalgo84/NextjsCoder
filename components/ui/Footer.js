@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='w-full bg-black absolute bottom-0 text-white'>
         <div className='container m-auto py-5'> 
             <div className='text-center'>
-                <h2 className='text-bold-600 text-gray-500 text-3xl '>Contactos</h2>
+                <h2 className='text-bold-600 text-gray-500 text-3xl '>Contacto</h2>
                 <p>telefono: 12321351</p>
                 <p>email: bodega@gmail.com</p>
             </div>
@@ -31,7 +31,7 @@ const Footer = () => {
                     </div>
                 </section>
                 <section>
-                    <h2 className='text-2xl'>Bodega Maxteina</h2>
+                    <h2 className='sm:text-2xl text-center'>Bodega Maxteina</h2>
                     <p>Pasaje 23 km: 224, Mendoza, Argentina</p>
                 </section>
             </div>

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 export const Counter = () => {
   
-    const [counter, SetCounter] = useState(0)
+    const [counter, SetCounter] = useState(1)
     
 
     return (

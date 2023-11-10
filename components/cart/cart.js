@@ -8,15 +8,17 @@ import { mockData } from '../products/data'
 
 
 const products = [
+
     {
         "id": 0,
         "name": "Malbec Reserva",
         "description": "En nariz se percibe fresco, intenso y complejo, destacándose notas a frutas rojas, flores como rosas y violetas que se combinan con notas balsámicas. En la boca es frutado, fresco y jugoso, de buena estructura y largo final.",
         "category": "Malbec",
-        "precio": 14000,
+        "precio": 4800,
         "slug": "malbecreserva",
-        "image": "/images/09.jpg"
+        "image": "/images/malbecreserva.jpg"
         , "highlights": ["aroma bla", "uva", "blab", "ihwe"]
+        , "stock": "50"
 
     },
     {
@@ -24,10 +26,11 @@ const products = [
         "name": "Cabernet Reserva",
         "description": "En la nariz presenta buena expresión y tipicidad varietal, se destacan las notas a pimienta negra y casis. En la boca es carnoso, de estructura tánica fina y elegante, final largo y persistente.",
         "category": "Cabernet",
-        "precio": 14000,
+        "precio": 3000,
         "slug": "cabernetreserva",
-        "image": "/images/15.jpg"
+        "image": "/images/cabernetreserva.jpg"
         , "highlights": ["aroma bla", "uva", "blab", "ihwe"]
+        , "stock": "50"
     },
     // More products...
 ]
