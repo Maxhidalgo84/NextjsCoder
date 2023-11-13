@@ -32,8 +32,6 @@ export const ProductDetail = ({ slug }) => {
                              fill
                               src={product.image}
                               alt={product.name}
-                              
-                              //className="h-full w-full  object-center"
                           />
                       </div>
                   </div>

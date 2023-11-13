@@ -12,8 +12,8 @@ export async function GET(req, res, next, {params}) {
 
     const {categoria} = params
 
-   const data = categoria === 'todos' ? mockData : mockData.filter(item => item.category === categoria)
-
+    const data = categoria === 'todos' ? mockData : mockData.filter(item => item.category === categoria)
+ 
    
 
     await sleep(1000)

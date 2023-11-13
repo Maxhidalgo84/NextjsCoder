@@ -20,11 +20,11 @@ export default function Home({ params }) {
     return (
         <>
             {/* <Navbar/> */}
-            <main>  
-              <div>
-             <CategoryMenu />
-             <ProductsContainer categoria={categoria} />
-             </div>
+            <main>
+                <div>
+                    <CategoryMenu />
+                    <ProductsContainer categoria={categoria} />
+                </div>
             </main>
 
         </>
