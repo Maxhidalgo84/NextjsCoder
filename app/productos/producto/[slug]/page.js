@@ -19,7 +19,7 @@ export default function Home({params}) {
     return (
         <>
           
-            <main className="container">
+            <main className="container-fluid">
               <ProductDetail slug={slug} />
             </main>
 

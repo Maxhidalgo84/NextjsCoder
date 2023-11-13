@@ -30,9 +30,9 @@ export const Hero = ({greeting}) => {
               margin: 'auto',
               opacity: '0.5 '
             }}
+            
           priority={true}
-          objectFit='cover'
-          layout='responsive'
+          
                     
             
          
@@ -54,8 +54,7 @@ export const Hero = ({greeting}) => {
                   <Image
                         src={vinologo}
                         alt="Vino"
-                        width={200}
-                        blurDataURL="data:..."
+                        width={200}                        
                       //placeholder="blur" // Optional blur-up while loading
                       />
                   </Link>

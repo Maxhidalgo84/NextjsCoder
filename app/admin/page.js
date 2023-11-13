@@ -1,5 +1,5 @@
 import React from 'react'
-import { mockData } from '@/components/products/data'
+import { mockData } from '@/data/mockData'
 import Link from 'next/link'
 import Image from 'next/image'
 

@@ -8,25 +8,26 @@ export const Products = ({item}) => {
   return (
     <>
         <div>
-                   <article className="max-sm:block flex justify-between gap-x-6 py-5">
-                      <Link href={`/productos/producto/${item.slug}`}>
-                      <div className="flex min-w-0 gap-x-4">
+                   <article className="max-sm:block  flex justify-between  gap-x-6 py-3">
+                      <Link href={`/productos/producto/${item.slug}`} className='xl:w-10/12 m-auto' >
+                      <div className="flex min-w-0  gap-x-4">
                           {/* <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" /> */}
-                          <div className="min-w-0 mx-5 sm:flex  bg-gray-300">
-                            <div className='relative w-full md:w-1/2  h-96'>
+                          <div className="min-w-0 mx-5  sm:flex bg-gray-300 border-black border-2">
+                         <div className='relative    bg-white '>
                               <Image
-                              //width={300}
-                              //height={300} 
-                              fill
-                              //sizes='(max-width: 640px) 50vw, 300px'
+                              width={0}
+                              height={0}
+                              sizes="100vw"
+                              style={{ width: '100%', height: 'auto',margin:"auto"}} // optional
                               src={item.image}
                               alt={item.name}
+                             
                               />
                               </div>
                             
-                      <div className='my-auto mx-4 w-fit text-start'>
-                                  <p className="sm:text-3xl mb-5 font-semibold leading-6 text-gray-900">{item.name}</p>
-                                  <p className='text-xs sm:text-xl ' >{item.description}</p>
+                              <div className='md:my-auto my-2 mx-2 w-fit  sm:text-start'>
+                                  <p className="lg:text-3xl text-xl mb-5  font-semibold leading-4 text-gray-900">{item.name}</p>
+                                  <p className='text-base lg:text-xl text-justify' >{item.description}</p>
                               </div>
                           </div>
                       </div>

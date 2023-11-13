@@ -1,4 +1,4 @@
-import { mockData } from './data'
+import { mockData } from '@/data/mockData'
 import { StarIcon } from '@heroicons/react/20/solid'
 
 
@@ -21,7 +21,7 @@ export const ProductDetail = ({ slug }) => {
    
 
           return (
-              <div className="bg-white m-auto min-w-max ">
+              <div className="bg-white m-auto ">
               <div className="pt-6">
 
 

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { mockData } from './data';
+import { mockData } from '@/data/mockData';
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form';
 
