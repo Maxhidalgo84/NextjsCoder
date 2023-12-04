@@ -2,6 +2,8 @@
 import Footer from "@/components/ui/Footer"
 import "./globals.css"
 import { Hero } from "@/components/ui/Header/Hero"
+import { CartProvider } from "@/components/context/CartContext"
+import { Authprovider } from "@/components/context/AuthContext"
 
 export const metadata = {
   title: 'Next App',
@@ -12,8 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Authprovider>
+        <CartProvider>
+
           {children}
+
           <Footer />
+          </CartProvider>
+          </Authprovider>
        </body>
     </html>
   )

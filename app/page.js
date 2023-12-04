@@ -11,6 +11,7 @@ export const metadata = {
     description: "Vinos y visitas",
     type: "article"
   }
+  
 }
 
 

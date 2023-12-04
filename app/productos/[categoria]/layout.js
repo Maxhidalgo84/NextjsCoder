@@ -1,12 +1,12 @@
 import { Hero } from '@/components/ui/Header/Hero'
-import React from 'react'
+import React, { Suspense } from 'react'
+
 
 const VinosLayout = ({children}) => {
   return (
     <>
     <Hero greeting={"Nuestros Vinos"} />
-    {children}
-
+      {children}
     </>
   )
 }

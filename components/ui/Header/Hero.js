@@ -8,10 +8,14 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import Cart from '@/components/cart/cart'
+import { useCartContext } from '@/components/context/CartContext'
 
 
 
 export const Hero = ({ greeting }) => {
+
+
+  const {totalQty} = useCartContext()
 
 
   const [show, setShow] = useState(false)
@@ -57,8 +61,10 @@ export const Hero = ({ greeting }) => {
           <button
             className='text-white md:mr-5 my-1' onClick={() => { setShow(true) }}>
             <Cart show={show} setShow={setShow} />
-            <FontAwesomeIcon className='w-5 ' icon={faCartShopping} />
+            <FontAwesomeIcon className='w-5 ' icon={faCartShopping} /> 
+            <span>{totalQty()}</span>
           </button>
+          
         </div>
 
 

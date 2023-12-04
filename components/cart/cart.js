@@ -1,57 +1,24 @@
+"use client"
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import { useCartContext } from '../context/CartContext'
+import CartItem from './CartItem'
 
 
 
 
 
+export default function Cart({ show, setShow }) {
 
-const products = [
 
-    {
-        "id": 0,
-        "name": "Malbec Reserva",
-        "description": "En nariz se percibe fresco, intenso y complejo, destacándose notas a frutas rojas, flores como rosas y violetas que se combinan con notas balsámicas. En la boca es frutado, fresco y jugoso, de buena estructura y largo final.",
-        "category": "Malbec",
-        "precio": 4800,
-        "slug": "malbecreserva",
-        "image": "/images/malbecreserva.jpg"
-        , "highlights": ["aroma bla", "uva", "blab", "ihwe"]
-        , "stock": "50"
+    const { cart, totalQty, totalPrice, emptycart } = useCartContext()
 
-    },
-    {
-        "id": 1,
-        "name": "Cabernet Reserva",
-        "description": "En la nariz presenta buena expresión y tipicidad varietal, se destacan las notas a pimienta negra y casis. En la boca es carnoso, de estructura tánica fina y elegante, final largo y persistente.",
-        "category": "Cabernet",
-        "precio": 3000,
-        "slug": "cabernetreserva",
-        "image": "/images/cabernetreserva.jpg"
-        , "highlights": ["aroma bla", "uva", "blab", "ihwe"]
-        , "stock": "50"
-    },
-    // More products...
-]
-
-export default function Cart({show,setShow}) {
-
-    
-    // const [open, setopen] = useState(false)
-   
-    // useEffect(() => {
-    //     if (cart) {
-    //         setopen(true)
-    //     }    
-    // }, [cart])
-    
-    
 
 
     return (
         <Transition.Root show={show} as={Fragment}>
-            <Dialog as="div" className="relative z-10" onClose={()=> setShow(false)}>
+            <Dialog as="div" className="relative z-10" onClose={() => setShow(false)}>
                 <Transition.Child
                     as={Fragment}
                     enter="ease-in-out duration-500"
@@ -97,39 +64,8 @@ export default function Cart({show,setShow}) {
                                             <div className="mt-8">
                                                 <div className="flow-root">
                                                     <ul role="list" className="-my-6 divide-y divide-gray-200">
-                                                        {products.map((product) => (
-                                                            <li key={product.id} className="flex py-6">
-                                                                <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                                                    <img
-                                                                        src={product.image}
-                                                                        alt={product.imageAlt}
-                                                                        className="h-full w-full object-cover object-center"
-                                                                    />
-                                                                </div>
-
-                                                                <div className="ml-4 flex flex-1 flex-col">
-                                                                    <div>
-                                                                        <div className="flex justify-between text-base font-medium text-gray-900">
-                                                                            <h3>
-                                                                                <a href={product.href}>{product.name}</a>
-                                                                            </h3>
-                                                                            <p className="ml-4">${product.precio}</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="flex flex-1 items-end justify-between text-sm">
-                                                                        <p className="text-gray-500">Cantidad: 1</p>
-
-                                                                        <div className="flex">
-                                                                            <button
-                                                                                type="button"
-                                                                                className="font-medium text-indigo-600 hover:text-indigo-500"
-                                                                            >
-                                                                                Eliminar
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
+                                                        {cart.map(product => (
+                                                            <CartItem product={product} key={product.slug} />
                                                         ))}
                                                     </ul>
                                                 </div>
@@ -138,8 +74,9 @@ export default function Cart({show,setShow}) {
 
                                         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                                             <div className="flex justify-between text-base font-medium text-gray-900">
+                                                <p>Cantidad: {totalQty()} </p>
                                                 <p>Subtotal</p>
-                                                <p>$262.00</p>
+                                                <p>$ {totalPrice()}</p>
                                             </div>
                                             <p className="mt-0.5 text-sm text-gray-500">Gastos envio se calculan despues </p>
                                             <div className="mt-6">
@@ -152,18 +89,25 @@ export default function Cart({show,setShow}) {
                                             </div>
                                             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                                                 <p>
-                                                    o 
+                                                    o
                                                     <button
                                                         type="button"
                                                         className="font-medium text-indigo-600 hover:text-indigo-500"
                                                         onClick={() => setShow(false)}
                                                     >
-                                                         Continuar Comprando
+                                                        Continuar Comprando
                                                         <span aria-hidden="true"> &rarr;</span>
                                                     </button>
                                                 </p>
                                             </div>
                                         </div>
+                                        <button
+                                            type="button"
+                                            className="font-medium text-red-600 hover:text-indigo-500"
+                                            onClick={emptycart}
+                                        >
+                                            Vaciar
+                                        </button>
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>

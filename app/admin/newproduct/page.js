@@ -1,5 +1,15 @@
-import { ProducNew } from "@/components/products/productnew"
+import { ProductNew } from "@/components/admin/productnew"
 
+export const metadata = {
+    title: "Bodega Maxteina",
+    description: "Vinos de Mendoza",
+    keywords: ["Vinos", "Bodega", "Visitas", "Malbec", "Cabernet", "Blend"],
+    openGraph: {
+        title: "Bodega Maxteina",
+        description: "Vinos y visitas",
+        type: "article"
+    }
+}
 
 
 
@@ -11,7 +21,7 @@ export default function Home() {
         <>
 
             <main className="container mx-auto">
-                <ProducNew  />
+                <ProductNew  />
             </main>
 
         </>

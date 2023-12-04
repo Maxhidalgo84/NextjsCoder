@@ -1,16 +1,18 @@
-import { ProductEdit } from "@/components/products/productedit"
+import { ProductAdm, ProductEdit } from "@/components/admin/productAdm"
 
 
 
 
-export default function Home({ params }) {
+export default async function Home({ params }) {
 
     const { slug } = params
-    return (
+
+
+   return (
         <>
 
             <main className="container mx-auto">
-                <ProductEdit slug={slug} />
+                <ProductAdm slug={slug} />
             </main>
 
         </>

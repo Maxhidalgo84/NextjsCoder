@@ -1,18 +1,23 @@
 import React from 'react'
 import { Products } from './Products'
-import {mockData} from "@/data/mockData"
+
 
 
 
 export const ProductsContainer = async({categoria}) => {
 
-  // const items = await fetch(`http://localhost:3000/api/productos/${categoria}`,
-  // {cache: 'no-store'}
-  // ).then(r => r.json())
+  const response = await fetch(`http://localhost:3000/api/productos/${categoria}`,
+   {//cache: 'force-cache',
+    next: {
+     revalidate: 60
+  }})
+
+
+  const items = await response.json()
   
  
   
- const items = categoria === 'todos' ? mockData : mockData.filter(item => item.category === categoria)
+ //const items = categoria === 'todos' ? mockData : mockData.filter(item => item.category === categoria)
 
   
   return (

@@ -1,13 +1,15 @@
+
+// export const mockData = [
 //    {
-//     "id": 0,
-//     "name": "Malbec Reserva",
-//     "description": "En nariz se percibe fresco, intenso y complejo, destacándose notas a frutas rojas, flores como rosas y violetas que se combinan con notas balsámicas. En la boca es frutado, fresco y jugoso, de buena estructura y largo final.",
-//     "category": "Malbec",
-//     "precio": 4800,
-//     "slug": "malbecreserva",
-//     "image": "/images/malbecreserva.jpg",
-//     "highlights": ["intenso", "uva", "rojo", "notas"],
-//     "stock": 50
+//     id: 0,
+//     name: "Malbec Reserva",
+//     description: "En nariz se percibe fresco, intenso y complejo, destacándose notas a frutas rojas, flores como rosas y violetas que se combinan con notas balsámicas. En la boca es frutado, fresco y jugoso, de buena estructura y largo final.",
+//     category: "Malbec",
+//     precio: 4800,
+//     slug: "malbecreserva",
+//     image: "/images/malbecreserva.jpg",
+//     highlights: ["intenso", "uva", "rojo", "notas"],
+//     stock: 50
 //    },
 
 // {
@@ -73,7 +75,7 @@
 
 // ]
 
-export const mockData=
+export const mockData= 
 
     [
         {
@@ -173,3 +175,4 @@ export const mockData=
             "stock": 50
         }
     ]
+    

@@ -1,14 +1,16 @@
 import React from 'react'
-import { mockData } from '@/data/mockData'
 import Link from 'next/link'
 import Image from 'next/image'
 
 
 
+export default async function Home() {
 
-const productos = mockData
+    const response = await fetch(`http://localhost:3000/api/productos/todos`)
 
-export default function Home() {
+
+    const productos = await response.json()
+
 
 
     return (
@@ -23,18 +25,19 @@ export default function Home() {
             </Link>
             <ul role="list" className="divide-y ml-2 divide-gray-100">
                 {productos?.map((item) => (
-                    <li key={item.id} className="max-sm:block  flex justify-between gap-x-6 py-5">
-                        <div className="flex min-w-0 w-48 max-sm:m-auto justify-between  items-center gap-x-4">
+                    <li key={item.slug} className=" flex justify-between gap-x-6 py-5">
+                        <div className="flex min-w-0  max-xs:m-auto justify-between items-center gap-x-4">
                             {/* <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" /> */}
 
-                            <p className="text-sm font-semibold leading-6 text-gray-900">{item.name}</p>
+                            <p className="text-sm min-[540px]:w-48 w-32 font-semibold leading-6  text-gray-900">{item.name}</p>
                             <Image
-                                width={50}
-                                height={50}
+                                width={0}
+                                height={0}
+                                style={{ width: '50px', height: "50px" }}
                                 src={item.image}
                                 alt={item.name}
-                                className="bject-cover object-center"
-                            />
+                                className="object-cover object-center" />
+                            <p className='text-sm font-semibold leading-6 text-gray-900'>stock: {item.stock}</p>
 
                         </div>
                         <div className="max-sm:text-center  mr-10 ">

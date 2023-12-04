@@ -1,10 +1,13 @@
 import { ProductDetail } from "@/components/products/ProductDetail";
+import Skeleton from "@/components/products/skeleton";
+import { Suspense } from "react";
 
 
 
-export async function generateMetada({ params }) {
+
+export const generateMetadata = async ({ params }) => {
     return {
-        title: `vino - ${params.slug}`
+        title: 'Bodega Maxteina - ' + params.slug
     }
 }
 
@@ -20,7 +23,7 @@ export default function Home({params}) {
         <>
           
             <main className="container-fluid">
-              <ProductDetail slug={slug} />
+                <ProductDetail slug={slug} />   
             </main>
 
         </>

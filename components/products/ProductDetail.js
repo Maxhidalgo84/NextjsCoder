@@ -1,10 +1,10 @@
 import { mockData } from '@/data/mockData'
 import { StarIcon } from '@heroicons/react/20/solid'
 
-
 import React from 'react'
 import Image from 'next/image'
-import { Counter } from '../Counter'
+import QtySelector from './QtySelector'
+
 
 
       
@@ -15,9 +15,15 @@ import { Counter } from '../Counter'
           function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-export const ProductDetail = ({ slug }) => {
+export const ProductDetail = async ({ slug }) => {
 
-    const product = mockData.find(p => p.slug === slug)
+    //const product = mockData.find(p => p.slug === slug)
+
+    const response = await fetch(`http://localhost:3000/api/product/${slug}`,
+        { cache: 'no-store' })
+    // ).then(r => r.json())
+
+    const product = await response.json()
    
 
           return (
@@ -46,8 +52,7 @@ export const ProductDetail = ({ slug }) => {
                       <div className="mt-4 lg:row-span-3 lg:mt-0">
                           <h2 className="sr-only">Product information</h2>
                           <p className="text-3xl tracking-tight text-gray-900">${product.precio}</p>
-                          <Counter/>
-
+                       
                           {/* Reviews */}
                           <div className="mt-6">
                               <h3 className="sr-only">Reviews</h3>
@@ -71,18 +76,8 @@ export const ProductDetail = ({ slug }) => {
                               </div>
                           </div>
 
-                          <form className="mt-10">
-                           
-                                                                                     
-                                                 
-
-                              <button
-                                  type="submit"
-                                  className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                              >
-                                  Agregar al carrito
-                              </button>
-                          </form>
+                    
+                              <QtySelector initial={1} item={product}  />       
                       </div>
 
                       <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
@@ -100,7 +95,7 @@ export const ProductDetail = ({ slug }) => {
 
                               <div className="mt-4">
                                   <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                                      {product.highlights.map((highlight) => (
+                                      {product.highlights?.map((highlight) => (
                                           <li key={highlight} className="text-gray-400">
                                               <span className="text-gray-600">{highlight}</span>
                                           </li>

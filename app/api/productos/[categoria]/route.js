@@ -1,21 +1,29 @@
-//import { mockData } from "@/components/products/data";
 import { NextResponse } from "next/server";
-import {mockData} from "@/data/mockData"
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from '@/firebase/config'
 
-const sleep = (timer) => {
-    return new Promise((resolve, reject) => setTimeout(resolve, timer))
-}
+export const GET = async (req, { params }) => {
 
-export async function GET(req, res, next, {params}) {
+    const { categoria } = params
+
+    const productsCollection = collection(db, "products");
+
+    // const q = categoria === 'todos'
+    // ? productsRef
+    //     : query(productsRef, where("category", "==", `${categoria}` ));
+
+    const q = categoria === 'todos'
+        ? productsCollection
+        : query(productsCollection, where("category", "==", categoria))
 
 
+    const querySnapshot = await getDocs(q);
 
-    const {categoria} = params
+    const docs = querySnapshot.docs.map(doc => doc.data());
 
-    const data = categoria === 'todos' ? mockData : mockData.filter(item => item.category === categoria)
- 
-   
+    // const data = categoria === 'todos' ? mockData : mockData.filter(item => item.category === categoria)
 
-    await sleep(1000)
-    return NextResponse.json(data)
+    // await sleep(1000)
+
+    return NextResponse.json(docs)
 }
