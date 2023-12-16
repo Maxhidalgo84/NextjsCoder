@@ -4,6 +4,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useCartContext } from '../context/CartContext'
 import CartItem from './CartItem'
+import Link from 'next/link'
 
 
 
@@ -78,14 +79,13 @@ export default function Cart({ show, setShow }) {
                                                 <p>Subtotal</p>
                                                 <p>$ {totalPrice()}</p>
                                             </div>
-                                            <p className="mt-0.5 text-sm text-gray-500">Gastos envio se calculan despues </p>
                                             <div className="mt-6">
-                                                <a
-                                                    href="#"
+                                                <Link
+                                                    href="/cart"
                                                     className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                                                 >
                                                     Comprar
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                                                 <p>

@@ -10,8 +10,16 @@ export const useCartContext = () => useContext(CartContext)
 export const CartProvider = ({ children }) => {
 
 
+    
+    
+    let cartLocal =  JSON.parse(localStorage.getItem("cart"));
+    if (cartLocal === null) {
+        cartLocal = [];
+    }
 
-    const [cart, SetCart] = useState([])
+    const [cart, SetCart] = useState(cartLocal)
+
+
 
     const isInCart = (slug) => cart.find(item => item.slug === slug);
 
@@ -29,8 +37,12 @@ export const CartProvider = ({ children }) => {
             const newProducto = { ...producto, quantity: quantity };
             SetCart([...cart, newProducto])
         }
+        
     }
 
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
 
 

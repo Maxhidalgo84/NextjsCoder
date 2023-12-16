@@ -29,15 +29,9 @@ export default function Home({ params }) {
 
     const { categoria } = params
 
-    // const response = await fetch(`http://localhost:3000/api/productos/${categoria}`,
-    //   {cache: 'no-store'})
-  
-
-    //  const items = await response.json()
-
     return (
         <>
-            {/* <Navbar/> */}
+
             <main>
                 <div>
                     <CategoryMenu />
