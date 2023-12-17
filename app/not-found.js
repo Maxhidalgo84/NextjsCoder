@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-const notfound = () => {
+const Notfound = () => {
 
     const router = useRouter()
 
@@ -30,4 +30,4 @@ const notfound = () => {
 
 }
 
-export default notfound
+export default Notfound
