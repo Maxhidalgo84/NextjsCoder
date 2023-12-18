@@ -8,12 +8,12 @@ import { getAuth } from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBW42pe74P38_9rlnB67IsYH3h_UKQp2YQ",
-    authDomain: "codrnextjs.firebaseapp.com",
-    projectId: "codrnextjs",
-    storageBucket: "codrnextjs.appspot.com",
-    messagingSenderId: "822457168850",
-    appId: "1:822457168850:web:3e3c51dfb7d6481be18e0b"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket:process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
 // Initialize Firebase

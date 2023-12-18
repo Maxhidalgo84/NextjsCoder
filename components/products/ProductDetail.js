@@ -19,7 +19,7 @@ export const ProductDetail = async ({ slug }) => {
 
     //const product = mockData.find(p => p.slug === slug)
 
-    const response = await fetch(`http://localhost:3000/api/product/${slug}`,
+    const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/${slug}`,
         { cache: 'no-store' })
     // ).then(r => r.json())
 

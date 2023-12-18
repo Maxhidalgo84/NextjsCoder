@@ -8,9 +8,10 @@ export const OrderDetail = async ({ id }) => {
 
 
 
-    const response = await fetch(`http://localhost:3000/api/order/${id}`,
+    const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/order/${id}`,
         { cache: 'no-store' })
     // ).then(r => r.json())
+    // http://localhost:3000
 
 
     const order = await response.json()

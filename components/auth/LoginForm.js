@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 const LoginPage = () => {
 
-    const { register, handleSubmit, getValues,resetField,reset } = useForm()
+    const { register, handleSubmit, getValues, resetField, reset } = useForm()
 
     const [error, setError] = useState("");
     const [message, setMessage] = useState("");
@@ -18,34 +18,34 @@ const LoginPage = () => {
 
 
 
-    const regis = ()=> {
+    const regis = () => {
         onRegister()
     }
 
-    const PassReset= async() => {
+    const PassReset = async () => {
         resetField("password")
         setError("")
         const resetEmail = getValues("email");
-        if (resetEmail){
-        try{
-        await resetPass(resetEmail)
-        setMessage(`Se envio reset a ${resetEmail} correctamente`)
-        }catch(e){
-        //handle error
-        }    
-    }
+        if (resetEmail) {
+            try {
+                await resetPass(resetEmail)
+                setMessage(`Se envio reset a ${resetEmail} correctamente`)
+            } catch (e) {
+                //handle error
+            }
+        }
     }
 
-    const onSubmit = async(data) => {
-    
+    const onSubmit = async (data) => {
+
         try {
-          setMessage("")  
-         await loginUser(data)
-    } catch (error) {
-        setError("Credenciales invalidas");
-        reset()
+            setMessage("")
+            await loginUser(data)
+        } catch (error) {
+            setError("Credenciales invalidas");
+            reset()
 
-    }
+        }
         //console.log(res)
     };
 
@@ -55,7 +55,7 @@ const LoginPage = () => {
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <Image
-                        
+
                         width={0}
                         height={0}
                         priority
@@ -69,7 +69,7 @@ const LoginPage = () => {
                     </h2>
                 </div>
                 {error && <div className="p-4  mx-auto  text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-                   <span className="font-medium">Alerta</span> {error}
+                    <span className="font-medium">Alerta</span> {error}
                 </div>}
                 {message && <div className="p-4 mx-auto text-sm text-white rounded-lg bg-green-600 dark:bg-gray-800 dark:text-white" role="alert">
                     <span className="font-medium">Listo </span> {message}
@@ -83,13 +83,13 @@ const LoginPage = () => {
                             </label>
                             <div className="mt-2">
                                 <input
-                                    {...register("email",   { require: true})}
+                                    {...register("email", { require: true })}
                                     id="email"
                                     name="email"
                                     type="email"
                                     autoComplete="email"
                                     required
-                                
+
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
