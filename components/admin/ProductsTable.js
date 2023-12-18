@@ -3,11 +3,14 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+const ProductsTable = async() => {
 
 
-const ProductsTable = ({ productos }) => {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/productos/todos`,
+        { cache: 'no-store' })
 
 
+    const productos = await response.json()
 
 
     return (

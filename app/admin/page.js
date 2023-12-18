@@ -1,20 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import ProductsTable from '@/components/admin/ProductsTable'
-import { useAuthContext } from '@/components/context/AuthContext'
 import LogoutButton from '@/components/admin/LogOutButton'
 
 
 
 
 const AdminPage = async () => {
-
-    const response = await fetch(`http://localhost:3000/api/productos/todos`)
-
-
-    const productos = await response.json()
-
-
 
     return (
         <main>
@@ -35,7 +27,7 @@ const AdminPage = async () => {
 
                     className='bg-black hover:bg-gray-600 text-white focus:outline-none focus:ring-4 focus:ring-gray-300  flex m-auto rounded-full p-1' >Agregar producto</button>
             </Link>
-            <ProductsTable productos={productos} />
+            <ProductsTable />
 
             <button className='flex m-auto rounded-full  px-2 py-1 text-white  hover:bg-green-600 bg-green-800'>
                 <Link href={`/`}>

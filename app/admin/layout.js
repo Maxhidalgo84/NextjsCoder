@@ -8,8 +8,8 @@ const AdminLayout = ({ children, login, signup }) => {
 
     return (
         <div>
-            {user.logged ? children : 
-          user.register ? signup : login }
+            {user?.logged ? children : 
+          user?.register ? signup : login }
      
         </div>
     )

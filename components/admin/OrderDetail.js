@@ -2,16 +2,13 @@ import Link from 'next/link'
 import OrderItem from './OrderItem'
 
 
-
-
 export const OrderDetail = async ({ id }) => {
-
 
 
     const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/order/${id}`,
         { cache: 'no-store' })
     // ).then(r => r.json())
-    // http://localhost:3000
+   
 
 
     const order = await response.json()
@@ -46,7 +43,7 @@ export const OrderDetail = async ({ id }) => {
                         <div className="mt-8">
                             <div className="flow-root">
                                 <ul role="list" className="-my-6 divide-y divide-gray-200">
-                                    {order.items.map(product => (
+                                    {order?.items.map(product => (
                                         <OrderItem product={product} key={product.slug} />
                                     ))}
                                 </ul>

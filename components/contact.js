@@ -18,7 +18,7 @@ export default function Contact() {
 
     const onSubmit = handleSubmit(async (data) => {
 
-        const response = await fetch(`http://localhost:3000/api/contacto`, 
+        const response = await fetch(`/api/contacto`, 
         { method: 'POST' ,
         body: JSON.stringify(data)
         })

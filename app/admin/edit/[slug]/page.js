@@ -3,7 +3,7 @@ import { ProductAdm, ProductEdit } from "@/components/admin/productAdm"
 
 
 
-export default async function Home({ params }) {
+const EditPage = async ({ params }) => {
 
     const { slug } = params
 
@@ -19,3 +19,5 @@ export default async function Home({ params }) {
 
     )
 }
+
+export default EditPage

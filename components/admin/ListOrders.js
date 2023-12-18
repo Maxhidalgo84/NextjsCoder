@@ -23,15 +23,17 @@ const ListOrders = ({ orders }) => {
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
-                                    {orders.map(order => (
+                                    {orders?.map(order => (
                                         <tr key={order.id}>
                                             <td className="px-6 py-4 whitespace-nowrap">{order.client.name}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{order.id}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{order.client.email}</td>
                                             <td className="px-6 py-4 whitespace-nowrap">{order.date.toDate().toLocaleString('en-GB')}</td>
+                                            <td>
                                             <Link href={`/admin/orders/${order.id}`} className="text-indigo-600 hover:text-indigo-900">
                                                 Ver Detalle
                                             </Link>
+                                            </td>
                                         </tr>
                                     ))
                                     }

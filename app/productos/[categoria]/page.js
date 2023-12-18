@@ -22,9 +22,6 @@ export function generateStaticParams() {
 }
 
 
-
-
-
 export default function Home({ params }) {
 
     const { categoria } = params

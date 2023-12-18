@@ -1,9 +1,8 @@
 "use client"
 import React from 'react'
 import { useForm } from 'react-hook-form'
-
-import { useAuthContext } from '../context/AuthContext'
 import Image from 'next/image'
+import { useAuthContext } from '../context/AuthContext'
 
 
 const RegisterPage = () => {

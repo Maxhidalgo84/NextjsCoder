@@ -5,11 +5,6 @@ import React from 'react'
 import Image from 'next/image'
 import QtySelector from './QtySelector'
 
-
-
-      
-
-
           const reviews = {href: '#', average: 4, totalCount: 117 }
 
           function classNames(...classes) {

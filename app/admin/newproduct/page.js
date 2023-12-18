@@ -14,7 +14,7 @@ export const metadata = {
 
 
 
-export default function Home() {
+const NewProduct = async() => {
 
    
     return (
@@ -28,3 +28,5 @@ export default function Home() {
 
     )
 }
+
+export default NewProduct

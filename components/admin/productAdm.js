@@ -4,8 +4,6 @@ import React from 'react'
 import { ProductEdit } from './ProductEdit';
 
 
-
-
 export const ProductAdm = async ({ slug }) => {
 
 
