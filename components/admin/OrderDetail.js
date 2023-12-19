@@ -8,7 +8,7 @@ const Getorder = async (id) => {
 
         const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/order/${id}`,
             { cache: 'no-store' })
-        const order = await response.json()
+        const order = await response?.json()
         return order
     } catch (error) {
         console.error(error);
