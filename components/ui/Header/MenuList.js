@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export const MenuList = ({ open }) => {
+const MenuList = ({ open }) => {
 
     const navigation = [
         { id: 1, href: "/productos/todos", name: "Nuestros vinos" },
@@ -47,3 +47,6 @@ export const MenuList = ({ open }) => {
         </>
     )
 }
+
+
+export default MenuList

@@ -1,4 +1,5 @@
-import { ProductNew } from "@/components/admin/productnew"
+import ProductNew from "@/components/admin/productnew"
+
 
 export const metadata = {
     title: "Bodega Maxteina",

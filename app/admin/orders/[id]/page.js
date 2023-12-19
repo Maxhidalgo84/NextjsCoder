@@ -1,7 +1,4 @@
-import { OrderDetail } from "@/components/admin/OrderDetail"
-
-
-
+import OrderDetail from "@/components/admin/OrderDetail"
 
 
 export default async function Home({ params }) {

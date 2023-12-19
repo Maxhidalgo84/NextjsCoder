@@ -12,7 +12,7 @@ import { useCartContext } from '@/components/context/CartContext'
 
 
 
-export const Hero = ({ greeting }) => {
+const Hero = ({ greeting }) => {
 
 
   const {totalQty} = useCartContext()
@@ -75,3 +75,5 @@ export const Hero = ({ greeting }) => {
     </>
   )
 }
+
+export default Hero

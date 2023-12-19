@@ -1,6 +1,4 @@
-import { ProductDetail } from "@/components/products/ProductDetail";
-import Skeleton from "@/components/products/skeleton";
-import { Suspense } from "react";
+import ProductDetail from "@/components/products/ProductDetail"
 
 
 

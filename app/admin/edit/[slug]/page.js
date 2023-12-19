@@ -1,7 +1,4 @@
-import { ProductAdm, ProductEdit } from "@/components/admin/productAdm"
-
-
-
+import ProductAdm from "@/components/admin/productAdm"
 
 const EditPage = async ({ params }) => {
 

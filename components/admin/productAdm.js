@@ -1,7 +1,7 @@
 
 import React from 'react'
+import ProductEdit from './ProductEdit'
 
-import { ProductEdit } from './ProductEdit';
 
 
 const ProductAdm = async ({ slug }) => {

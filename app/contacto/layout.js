@@ -1,4 +1,5 @@
-import { Hero } from '@/components/ui/Header/Hero'
+
+import Hero from '@/components/ui/Header/Hero'
 import React from 'react'
 
 const layoutContacto = ({children}) => {

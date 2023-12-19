@@ -5,7 +5,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 
 
 
-export const Menu = () => {
+const Menu = () => {
 
    const [open, setOpen]  = useState(false)
    
@@ -37,6 +37,6 @@ export const Menu = () => {
 }
 
 
-
+export default Menu
 
 

@@ -1,6 +1,7 @@
+import Section1 from "@/components/Section1"
+import Hero from "@/components/ui/Header/Hero"
 
-import { Section1 } from "@/components/Section1"
-import { Hero } from "@/components/ui/Header/Hero";
+
 
 export const metadata = {
   metadataBase: new URL('http://localhost:3000'),
