@@ -4,11 +4,9 @@ import { Products } from './Products'
 
 export const ProductsContainer = async({categoria}) => {
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/productos/${categoria}`,
-   {//cache: 'force-cache',
-    next: {
-     revalidate: 60
-  }})
+  const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/${categoria}`,
+    { cache: 'no-store' })
+  
 
  
   const items = await response.json()

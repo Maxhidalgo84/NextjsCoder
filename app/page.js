@@ -7,12 +7,7 @@ export const metadata = {
   title: "Bodega Maxteina",
   description: "Vinos de Mendoza",
   keywords: ["Vinos", "Bodega", "Visitas", "Malbec", "Cabernet", "Blend"],
-  openGraph: {
-    title: "Bodega Maxteina",
-    description: "Vinos y visitas",
-    type: "article"
-  }
-  
+ 
 }
 
 

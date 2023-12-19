@@ -15,7 +15,7 @@ export const GET = async (req, { params }) => {
     
     const querySnapshot = await getDocs(q);
   
-    const docs = querySnapshot.docs.map(doc => doc.data());
+    const docs = querySnapshot?.docs?.map(doc => doc.data());
 
 
 

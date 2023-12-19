@@ -24,8 +24,6 @@ export default function Contact() {
         })
 
         const values = response.json()
-
-    console.log(values)
     })
 
    

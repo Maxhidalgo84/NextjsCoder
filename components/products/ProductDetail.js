@@ -1,4 +1,4 @@
-import { mockData } from '@/data/mockData'
+
 import { StarIcon } from '@heroicons/react/20/solid'
 
 import React from 'react'
@@ -14,7 +14,7 @@ export const ProductDetail = async ({ slug }) => {
 
     //const product = mockData.find(p => p.slug === slug)
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/${slug}`,
+    const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL +`/api/product/${slug}`,
         { cache: 'no-store' })
     // ).then(r => r.json())
 

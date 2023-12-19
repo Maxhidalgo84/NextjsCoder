@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Skeleton({ number }) {
+const Skeleton=({ number })=> {
     return (
         Array(number).fill(0).map((el, index) => (
             <div key={index}>
@@ -17,3 +17,5 @@ export default function Skeleton({ number }) {
         ))
     )
 }
+
+export default Skeleton

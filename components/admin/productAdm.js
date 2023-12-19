@@ -8,7 +8,7 @@ export const ProductAdm = async ({ slug }) => {
 
 
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/${slug}`,
+    const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL+ `/api/product/${slug}`,
         { cache: 'no-store' })
     // ).then(r => r.json())
 

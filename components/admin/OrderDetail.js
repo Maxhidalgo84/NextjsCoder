@@ -2,16 +2,19 @@ import Link from 'next/link'
 import OrderItem from './OrderItem'
 
 
+
+
 export const OrderDetail = async ({ id }) => {
 
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/order/${id}`,
+    const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL`/api/order/${id}`,
         { cache: 'no-store' })
     // ).then(r => r.json())
    
 
 
     const order = await response.json()
+
 
 
     return (

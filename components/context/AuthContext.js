@@ -10,7 +10,6 @@ const AuthContext = createContext()
 export const useAuthContext = () => useContext(AuthContext)
 
 
-
 export const Authprovider = ({children}) =>{
 
     const [user, setUser] = useState({
