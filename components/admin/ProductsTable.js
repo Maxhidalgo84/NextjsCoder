@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 
-const Getproducts = async (categoria) => {
+const Getproducts = async () => {
     try {
         const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/todos`,
             { cache: 'no-store' })

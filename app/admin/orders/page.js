@@ -6,10 +6,16 @@ import { collection, getDocs } from "firebase/firestore"
 import Link from "next/link"
 
 const getOrders = async () => {
-    const ordersRef = collection(db, "orders")
-    const querySnapshot = await getDocs(ordersRef)
-    const docs = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }))
-    return docs
+    try {
+        const ordersRef = collection(db, "orders")
+        const querySnapshot = await getDocs(ordersRef)
+        const docs = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+        return docs
+        
+    } catch (error) {
+        
+    }
+
 }
 
 

@@ -6,7 +6,7 @@ import OrderItem from './OrderItem'
 const Getorder = async (id) => {
     try {
 
-        const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL`/api/order/${id}`,
+        const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/order/${id}`,
             { cache: 'no-store' })
         const order = await response.json()
         return order

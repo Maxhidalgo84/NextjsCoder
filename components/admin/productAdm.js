@@ -3,7 +3,7 @@ import React from 'react'
 import ProductEdit from './ProductEdit'
 
 
-const Getproduct = async (categoria) => {
+const Getproduct = async (slug) => {
     try {
         const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/product/${slug}`,
             { cache: 'no-store' })
