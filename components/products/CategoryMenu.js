@@ -12,7 +12,7 @@ const links = [
 
 
 
-export const CategoryMenu  =()=>{
+const CategoryMenu  =()=>{
 
     const pathname = usePathname()
 
@@ -41,3 +41,4 @@ export const CategoryMenu  =()=>{
 
 }
 
+export default CategoryMenu

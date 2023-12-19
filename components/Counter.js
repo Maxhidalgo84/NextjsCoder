@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-export const Counter = () => {
+const Counter = () => {
   
     const [counter, SetCounter] = useState(1)
     
@@ -21,3 +21,4 @@ export const Counter = () => {
 
   )
 }
+ export default Counter

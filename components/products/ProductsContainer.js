@@ -2,7 +2,7 @@ import React from 'react'
 import { Products } from './Products'
 
 
-export const ProductsContainer = async({categoria}) => {
+const ProductsContainer = async({categoria}) => {
 
   const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/${categoria}`,
     { cache: 'no-store' })
@@ -29,3 +29,5 @@ export const ProductsContainer = async({categoria}) => {
     </>
   )
 }
+
+export default ProductsContainer

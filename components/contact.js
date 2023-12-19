@@ -7,7 +7,7 @@ function classNames(...classes) {
 }
 
 
-export default function Contact() {
+const Contact=()=> {
 
 
 
@@ -151,3 +151,6 @@ export default function Contact() {
         </div>
     )
 }
+
+
+export default Contact

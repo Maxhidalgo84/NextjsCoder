@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 
 
-export default function Cart({ show, setShow }) {
+const Cart =({ show, setShow })=> {
 
 
     const { cart, totalQty, totalPrice, emptycart } = useCartContext()
@@ -118,3 +118,5 @@ export default function Cart({ show, setShow }) {
         </Transition.Root>
     )
 }
+
+export default Cart

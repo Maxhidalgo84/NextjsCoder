@@ -10,7 +10,7 @@ import QtySelector from './QtySelector'
           function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-export const ProductDetail = async ({ slug }) => {
+const ProductDetail = async ({ slug }) => {
 
     //const product = mockData.find(p => p.slug === slug)
 
@@ -109,3 +109,4 @@ export const ProductDetail = async ({ slug }) => {
 
        
 
+export default ProductDetail

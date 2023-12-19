@@ -24,7 +24,7 @@ const createproduct = async (values, file) => {
 }
 
 
-export const ProductNew = () => {
+const ProductNew = () => {
 
 
     const { register, handleSubmit } = useForm()
@@ -183,3 +183,6 @@ export const ProductNew = () => {
         </>
     )
 }
+
+
+export default ProductNew

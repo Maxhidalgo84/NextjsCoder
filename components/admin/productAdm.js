@@ -4,7 +4,7 @@ import React from 'react'
 import { ProductEdit } from './ProductEdit';
 
 
-export const ProductAdm = async ({ slug }) => {
+const ProductAdm = async ({ slug }) => {
 
 
 
@@ -34,3 +34,5 @@ export const ProductAdm = async ({ slug }) => {
         </>
     )
 }
+
+export default ProductAdm

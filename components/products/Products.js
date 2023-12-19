@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export const Products = ({ item }) => {
+const Products = ({ item }) => {
 
 
   return (
@@ -40,3 +40,5 @@ export const Products = ({ item }) => {
     </>
   )
 }
+
+export default Products

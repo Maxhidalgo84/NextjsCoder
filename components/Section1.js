@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import logoimg from "/public/images/winery-393060_1280.jpg"
 
-export const Section1 = () => {
+const Section1 = () => {
   return (
     <>
       <div className='flex-wrap flex md:flex-nowrap sm:gap-10 items-center m-auto justify-center '>
@@ -22,3 +22,6 @@ export const Section1 = () => {
     </>
   )
 }
+
+
+export default Section1

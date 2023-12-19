@@ -39,7 +39,7 @@ const update = async (slug, image, data, file) => {
 
 
 
-export const ProductEdit = ({ product }) => {
+const ProductEdit = ({ product }) => {
 
 
     const { register, handleSubmit } = useForm()
@@ -166,3 +166,6 @@ export const ProductEdit = ({ product }) => {
         </div>
     )
 }
+
+
+export default ProductEdit

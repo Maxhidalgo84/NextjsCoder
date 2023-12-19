@@ -4,7 +4,7 @@ import OrderItem from './OrderItem'
 
 
 
-export const OrderDetail = async ({ id }) => {
+const OrderDetail = async ({ id }) => {
 
 
     const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL`/api/order/${id}`,
@@ -64,3 +64,6 @@ export const OrderDetail = async ({ id }) => {
         </div>
     )
 }
+
+
+export default OrderDetail
