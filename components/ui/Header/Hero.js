@@ -3,12 +3,12 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import vinologo from "/public/images/logovino.png"
 import portada2 from "/public/images/portada2.jpg"
-import { Menu } from './Menu'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import Cart from '@/components/cart/cart'
 import { useCartContext } from '@/components/context/CartContext'
+import Menu from './Menu'
 
 
 

@@ -1,5 +1,6 @@
-import { CategoryMenu } from "@/components/products/CategoryMenu"
-import { ProductsContainer } from "@/components/products/ProductsContainer"
+
+import CategoryMenu from "@/components/products/CategoryMenu"
+import ProductsContainer from "@/components/products/ProductsContainer"
 import Skeleton from "@/components/products/skeleton"
 import { Suspense } from "react"
 

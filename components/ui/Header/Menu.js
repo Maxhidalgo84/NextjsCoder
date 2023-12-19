@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
-import { MenuList } from './MenuList'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import MenuList from './MenuList'
 
 
 
