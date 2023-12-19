@@ -3,14 +3,31 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+
+const Getproducts = async (categoria) => {
+    try {
+        const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/todos`,
+            { cache: 'no-store' })
+        // ).then(r => r.json())
+        const productos = await response.json()
+        return productos
+    } catch (error) {
+        console.error(error);
+    }
+
+}
+
 const ProductsTable = async() => {
 
 
-    const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/todos`,
-        { cache: 'no-store' })
+    // const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/todos`,
+    //     { cache: 'no-store' })
 
 
-    const productos = await response.json()
+    // const productos = await response.json()
+
+
+    const productos = await Getproducts()
 
 
     return (

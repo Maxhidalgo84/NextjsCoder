@@ -3,18 +3,31 @@ import OrderItem from './OrderItem'
 
 
 
+const Getorder = async (id) => {
+    try {
 
+        const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL`/api/order/${id}`,
+            { cache: 'no-store' })
+        const order = await response.json()
+        return order
+    } catch (error) {
+        console.error(error);
+    }
+
+}
 
 const OrderDetail = async ({ id }) => {
 
 
-    const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL`/api/order/${id}`,
-        { cache: 'no-store' })
-    // ).then(r => r.json())
+    // const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL`/api/order/${id}`,
+    //     { cache: 'no-store' })
+    // // ).then(r => r.json())
    
 
 
-    const order = await response.json()
+    // const order = await response.json()
+
+    const order = await Getorder(id)
 
 
 
