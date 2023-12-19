@@ -16,8 +16,6 @@ const Getproduct = async (slug) => {
 
 }
 
-
-
 const ProductAdm = async ({ slug }) => {
 
 
@@ -39,7 +37,8 @@ const ProductAdm = async ({ slug }) => {
                 <div className="px-4 sm:px-0 flex justify-between">
                     <h3 className="text-base font-semibold leading-7 mx-auto text-gray-900">Edicion del producto</h3>
                 </div>
-                <ProductEdit product={product} />
+                <p>{product.name}</p>
+                {/* <ProductEdit product={product} /> */}
 
 
             </div>
