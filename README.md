@@ -21,8 +21,10 @@ Aca un resumen de los componentes que utilice:
 * NavBar  donde se realizo la barra de navegación, la misma maneja las búsquedas con el router
 * ProductosContainer aca se encuentra el listado de los items que se muestran en pantalla, se generan las card de cada uno en Item y se filtran los productos por categoria..
 * ProductDetail amplía cada producto y brinda información detalladada al respecto, se pueden agregar los productos al carrito, ver el stock disponible.
-*Cart: Se muestran los productos que van al carrito, detallando la cantidad, precio total y luego al finalizar la compra se despliega un formulario de venta.
-*Error o not-found: Mostrar páginas de error cuando se intente acceder a una categoría o producto inexistente.
+* Cart: Se muestran los productos que van al carrito, detallando la cantidad, precio total y luego al finalizar la compra se despliega un formulario de venta.
+* Error o not-found: Mostrar páginas de error cuando se intente acceder a una categoría o producto inexistente.
+* Autenticación y administración : Servicio de autenticación de Firebase y habilita una página para el ingreso de usuarios.
+Página de admin con acceso restringido que permita editar los productos del catálogo interactuando con firebase.
 
 ## Caracteristicas y herramientas:
 
