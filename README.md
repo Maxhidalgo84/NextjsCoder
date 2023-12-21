@@ -1,4 +1,4 @@
-<h1 align="center"> Ecommerce Productos de Jordan </h1>
+ Max<h1 align="center"> Ecommerce Bodega Maxteina </h1>
 
 Descripción de su proyecto: Desarrollo de una pagina web de ecommerce de productos de vineria, con carrito incluido realizada en Nextjs.
 
