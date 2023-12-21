@@ -9,8 +9,7 @@ const getOrders = async () => {
     try {
         const ordersRef = collection(db, "orders")
         const querySnapshot = await getDocs(ordersRef)
-       // const docs = querySnapshot?.docs?.map(doc => ({ ...doc.data(), id: doc.id }))
-        const docs = querySnapshot?.docs?.map(doc => doc.data())
+        const docs = querySnapshot?.docs?.map(doc => ({ ...doc.data(), id: doc.id }))
         return docs
 
     } catch (error) {
@@ -30,7 +29,7 @@ const Orders = async () => {
                     Admin Page
                 </Link>
             </button>
-            <h2 className="text-center font-medium">Ordenes</h2>
+            <h2 className="text-center font-medium">Ordenes</h2>        
             <div className="text-end">
                 <LogoutButton />
             </div>
