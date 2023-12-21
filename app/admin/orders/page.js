@@ -9,7 +9,8 @@ const getOrders = async () => {
     try {
         const ordersRef = collection(db, "orders")
         const querySnapshot = await getDocs(ordersRef)
-        const docs = querySnapshot?.docs?.map(doc => ({ ...doc.data(), id: doc.id }))
+       // const docs = querySnapshot?.docs?.map(doc => ({ ...doc.data(), id: doc.id }))
+        const docs = querySnapshot?.docs?.map(doc => doc.data())
         return docs
 
     } catch (error) {
