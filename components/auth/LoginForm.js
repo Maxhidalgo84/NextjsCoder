@@ -22,7 +22,8 @@ const LoginPage = () => {
         onRegister()
     }
 
-    const PassReset = async () => {
+    const PassReset = async (e) => {
+     
         resetField("password")
         setError("")
         const resetEmail = getValues("email");
@@ -31,13 +32,13 @@ const LoginPage = () => {
                 await resetPass(resetEmail)
                 setMessage(`Se envio reset a ${resetEmail} correctamente`)
             } catch (e) {
-                //handle error
+                console.error(error);
             }
         }
     }
 
     const onSubmit = async (data) => {
-
+       
         try {
             setMessage("")
             await loginUser(data)
@@ -46,7 +47,7 @@ const LoginPage = () => {
             reset()
 
         }
-        //console.log(res)
+       
     };
 
     return (
@@ -100,11 +101,6 @@ const LoginPage = () => {
                                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                                     Password
                                 </label>
-                                <div className="text-sm">
-                                    <button onClick={PassReset} className="font-semibold text-indigo-600 hover:text-indigo-500">
-                                        Forgot password?
-                                    </button>
-                                </div>
                             </div>
                             <div className="mt-2">
                                 <input
@@ -128,13 +124,18 @@ const LoginPage = () => {
                             </button>
                         </div>
                     </form>
-
+                    <div className="text-sm">
+                        <button onClick={PassReset} className="text-center mt-5 font-semibold text-indigo-600 hover:text-indigo-500">
+                            Forgot password?
+                        </button>
+                    </div>    
                     <p className="mt-10 text-center text-sm text-gray-500">
                         no tienes usuario?
                         <button onClick={regis} className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                             Registrarse
                         </button>
                     </p>
+                   
                 </div>
             </div>
         </>
