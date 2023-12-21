@@ -23,16 +23,14 @@ Aca un resumen de los componentes que utilice:
 *Cart: Se muestran los productos que van al carrito, detallando la cantidad, precio total y luego al finalizar la compra se despliega un formulario de venta.
 
 ## Caracteristicas y herramientas:
-#### Librerias
 
-- `Icons Material:`
-    - Para la utilización de iconos como DeleteIcon por ejemplo
+- `Tailwind CSS:`
     
 - `Sweet Alert 2:`
     - Para crear alerts con mejor apariencia y utilidad, como al momento de realizar una compra, o dar aviso de algo al usuario.
     
-- `React-router-dom:`
-    - Se utliza para realizar la navegacion dentro de la pagina, creando rutas para identificar cada seccion, utilizando  **Link, Navigate, NavLink, etc.** 
+- `use-Form:`
+    - Para el manejo de los formularios
 
 - `Storage:`
     Para guardar los productos del carrito.   
