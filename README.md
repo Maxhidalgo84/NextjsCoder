@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"> Ecommerce Productos de Jordan </h1>
 
-## Getting Started
+Descripción de su proyecto: Desarrollo de una pagina web de ecommerce de productos de vineria, con carrito incluido realizada en Nextjs.
 
-First, run the development server:
+![una muestra de la pagina]()
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+>Link del proyecto: [Ir a la tienda](https://nextjs-coder.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Cómo pueden usarlo los usuarios: Se puede aplicar para otros rubros, generando un ecommerce de productos o servicios. 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Funcionalidades: <ul>
+                   <li>Catalogo de productos</li>
+                   <li>Categoria de productos</li>
+                   <li>Carrito de compras</li>
+                   <li>Pagina Admin</li>
+                 <ul>
+## Componentes
+Aca un resumen de los componentes que utilice: 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* NavBar  donde se realizo la barra de navegación, la misma maneja las búsquedas con el router
+* ProductosContainer aca se encuentra el listado de los items que se muestran en pantalla, se generan las card de cada uno en Item y se filtran los productos por categoria..
+* ProductDetail amplía cada producto y brinda información detalladada al respecto, se pueden agregar los productos al carrito, ver el stock disponible.
+*Cart: Se muestran los productos que van al carrito, detallando la cantidad, precio total y luego al finalizar la compra se despliega un formulario de venta.
 
-## Learn More
+## Caracteristicas y herramientas:
+#### Librerias
 
-To learn more about Next.js, take a look at the following resources:
+- `Icons Material:`
+    - Para la utilización de iconos como DeleteIcon por ejemplo
+    
+- `Sweet Alert 2:`
+    - Para crear alerts con mejor apariencia y utilidad, como al momento de realizar una compra, o dar aviso de algo al usuario.
+    
+- `React-router-dom:`
+    - Se utliza para realizar la navegacion dentro de la pagina, creando rutas para identificar cada seccion, utilizando  **Link, Navigate, NavLink, etc.** 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `Storage:`
+    Para guardar los productos del carrito.   
+    
+- `Firebase:`
+    - **FireStore:**
+    Se realizo la base de datos en Firestore, donde tenemos almacenados por un lado todos los productos cada uno con su id, detalle como ser imagenes, precio, titulo, descripcion, etc,. Se pueden realizar consultas para traernos los productos filtrando por categoria o por id de producto, asi como tambien se guardan las ventas realizadas para mostrar todo de forma dinamica dentro de la aplicación.  
+  
+   
+### Diseño
+- Toda la app esta diseñada y maquetada con ***Tailwind CSS***
