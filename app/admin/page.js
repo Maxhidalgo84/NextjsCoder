@@ -25,7 +25,9 @@ const AdminPage = async () => {
             <Link href={`/admin/newproduct`}>
                 <button
 
-                    className='bg-black hover:bg-gray-600 text-white focus:outline-none focus:ring-4 focus:ring-gray-300  flex m-auto rounded-full p-1' >Agregar producto</button>
+                    className='bg-black hover:bg-gray-600 text-white focus:outline-none focus:ring-4 focus:ring-gray-300  flex m-auto rounded-full p-1' >
+                    Agregar producto
+                </button>
             </Link>
             <ProductsTable />
 

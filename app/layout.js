@@ -3,6 +3,7 @@ import Footer from "@/components/ui/Footer"
 import "./globals.css"
 import { CartProvider } from "@/components/context/CartContext"
 import { Authprovider } from "@/components/context/AuthContext"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: 'Next App',
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
         <CartProvider>
 
           {children}
-
+          <SpeedInsights />
           <Footer />
           </CartProvider>
           </Authprovider>

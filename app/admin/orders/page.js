@@ -11,9 +11,9 @@ const getOrders = async () => {
         const querySnapshot = await getDocs(ordersRef)
         const docs = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }))
         return docs
-        
+
     } catch (error) {
-        
+
     }
 
 }
@@ -34,7 +34,7 @@ const Orders = async () => {
                 <LogoutButton />
             </div>
             <ListOrders orders={orders} />
-            
+
         </main>
     )
 }

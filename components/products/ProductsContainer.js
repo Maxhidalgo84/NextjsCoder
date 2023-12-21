@@ -6,7 +6,7 @@ const Getproducts = async (categoria) => {
   try {
     const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/${categoria}`,
       { cache: 'no-store' })
-    // ).then(r => r.json())
+      
     const products = await response.json()
     return products
   } catch (error) {
@@ -18,16 +18,6 @@ const Getproducts = async (categoria) => {
 const ProductsContainer = async({categoria}) => {
 
   const items = await Getproducts(categoria)
-
-  // const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/${categoria}`,
-  //   { cache: 'no-store' })
-  
-
- 
-  // const items = await response.json()
-  
-
- //const items = categoria === 'todos' ? mockData : mockData.filter(item => item.category === categoria)
 
   
   return (

@@ -8,7 +8,6 @@ const Getproducts = async () => {
     try {
         const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/todos`,
             { cache: 'no-store' })
-        // ).then(r => r.json())
         const productos = await response.json()
         return productos
     } catch (error) {
@@ -18,14 +17,6 @@ const Getproducts = async () => {
 }
 
 const ProductsTable = async() => {
-
-
-    // const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL + `/api/productos/todos`,
-    //     { cache: 'no-store' })
-
-
-    // const productos = await response.json()
-
 
     const productos = await Getproducts()
 
